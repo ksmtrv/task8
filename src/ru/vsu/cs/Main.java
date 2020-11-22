@@ -21,8 +21,10 @@ public class Main {
 
         printArray(arr);
         System.out.println();
+
         shiftColumn(arr, stepsC);
         shiftLine(arr, stepsL);
+
         printArray(arr);
     }
 
