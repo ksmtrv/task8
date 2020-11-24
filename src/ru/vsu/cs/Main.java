@@ -32,11 +32,11 @@ public class Main {
         for (int i = arr.length - 1; i >= 0; i--) {
             int stepsR = stepsC % arr[i].length;
             while (stepsR-- > 0) {
-                int temp = arr[i][0];
+                int f = arr[i][0];
                 for (int j = arr[i].length - 1; j >= 0; j--) {
-                    int val = arr[i][j];
-                    arr[i][j] = temp;
-                    temp = val;
+                    int l = arr[i][j];
+                    arr[i][j] = f;
+                    f = l;
                 }
             }
         }
