@@ -22,13 +22,13 @@ public class Main {
         printArray(arr);
         System.out.println();
 
-        shiftColumn(arr, stepsC);
-        shiftLine(arr, stepsL);
+        moveColumns(arr, stepsC);
+        moveLine(arr, stepsL);
 
         printArray(arr);
     }
 
-    public static void shiftColumn(int[][] arr, int stepsC) {
+    private static void moveColumns(int[][] arr, int stepsC) {
         for (int i = arr.length - 1; i >= 0; i--) {
             int stepsR = stepsC % arr[i].length;
             while (stepsR-- > 0) {
@@ -42,7 +42,7 @@ public class Main {
         }
     }
 
-    public static void shiftLine(int[][] arr, int stepsL) {
+    private static void moveLine(int[][] arr, int stepsL) {
         for (int i = arr.length + stepsL; i >= 1; i--) {
             int[][] arrNew = arr.clone();
             arr[0] = arrNew[arr.length - 1];
@@ -58,7 +58,7 @@ public class Main {
         return scanner.nextInt();
     }
 
-    public static void printArray(int[][] arr) {
+    private static void printArray(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");
