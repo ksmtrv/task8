@@ -30,7 +30,7 @@ public class Main {
 
     private static void moveColumns(int[][] arr, int stepsC) {
         for (int i = arr.length - 1; i >= 0; i--) {
-            int stepsR = stepsC % arr[i].length;
+            int stepsR = stepsC;
             while (stepsR-- > 0) {
                 int f = arr[i][0];
                 for (int j = arr[i].length - 1; j >= 0; j--) {
