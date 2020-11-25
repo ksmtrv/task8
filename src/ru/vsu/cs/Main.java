@@ -19,13 +19,13 @@ public class Main {
         int stepsC = readSomething("step shear of the columns:");
         int stepsL = readSomething("line shift step:");
 
-        printArray(arr);
+        printArray(arr, l, c);
         System.out.println();
 
         moveColumns(arr, stepsC);
         moveLine(arr, stepsL);
 
-        printArray(arr);
+        printArray(arr, l, c);
     }
 
     private static void moveColumns(int[][] arr, int stepsC) {
@@ -58,9 +58,9 @@ public class Main {
         return scanner.nextInt();
     }
 
-    private static void printArray(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+    private static void printArray(int[][] arr, int l, int c) {
+        for (int i = 0; i < l; i++) {
+            for (int j = 0; j < c; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
